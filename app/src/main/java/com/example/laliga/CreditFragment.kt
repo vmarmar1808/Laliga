@@ -7,7 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.laliga.databinding.FragmentCreditBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 
 class CreditFragment : Fragment() {
@@ -25,22 +27,48 @@ class CreditFragment : Fragment() {
         _binding = FragmentCreditBinding.inflate(inflater, container, false)
        // return inflater.inflate(R.layout.fragment_credit, container, false)
 
-        binding.tvVersion.text = getString(R.string.hello_user, args.user)
+        binding.tvName.text = getString(R.string.hello_user, args.user)
+
 
         return binding.root
     }
 
+    class CreditAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
+
+        //Este metodo es para el número de fragmentos.
+        override fun getItemCount(): Int = 2
+
+        //Cada vez que creo un fragmento me dice en la posicioón en la que estoy.
+        override fun createFragment(position: Int): Fragment {
+            val fragment = if (position==0)
+                Tab1CreditFragment()
+            else
+                Tab2CreditFragment()
+            return fragment
+        }
+    }
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnContact.setOnClickListener{
-            val emailIntent = Intent(Intent.ACTION_SEND).apply {
-                type = "message/rfc822"
-                putExtra(Intent.EXTRA_EMAIL, arrayOf("vmarmar1808@g.educaand.es"))
-                putExtra(Intent.EXTRA_SUBJECT, "Consulta de la app 1ºRFEF")
-            }
-            startActivity(Intent.createChooser(emailIntent, "Enviar correo"))
-        }
+
+        binding.vpNotice.adapter = CreditAdapter (this)
+        TabLayoutMediator(binding.TabNotice, binding.vpNotice){
+
+                tab, position -> when(position){
+
+                    0 -> {
+                        tab.text = "Inicio"
+                        tab.setIcon(R.drawable.ic_home)
+                    }
+                     1-> {
+                        tab.text="Menú"
+                        tab.setIcon(R.drawable.ic_menu)
+                    }
+                }
+        }.attach()
+
     }
 
 
