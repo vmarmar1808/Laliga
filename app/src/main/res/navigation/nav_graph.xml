@@ -24,15 +24,12 @@
             app:argType="string" />
         <action
             android:id="@+id/action_creditFragment_to_menuFragment"
-            app:destination="@id/menuFragment" />
+            app:destination="@id/menuFragment"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
         android:name="com.example.laliga.MenuFragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" >
-        <action
-            android:id="@+id/action_menuFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_menu" />
 </navigation>

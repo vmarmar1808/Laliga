@@ -1,18 +1,15 @@
 package com.example.laliga.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.laliga.Equipo
 import com.example.laliga.EquipoOptionsBottomSheetFragment
 import com.example.laliga.R
-import com.google.android.material.animation.AnimatableView.Listener
 
 class EquipoAdapter(
-    private val equipoLista: List<Equipo>,
+    private var equipoLista: List<Equipo>,
     private val listener: EquipoOptionsBottomSheetFragment.OnEquipoOptionSelected
 ) : RecyclerView.Adapter<EquipoViewHold>() {
 
@@ -34,6 +31,13 @@ class EquipoAdapter(
     }
 
     override fun getItemCount(): Int = equipoLista.size
+
+    // Nuevo método para actualizar la lista de favoritos dinámicamente
+    fun actualizarLista(nuevaLista: List<Equipo>) {
+        equipoLista = nuevaLista.toMutableList()
+        notifyDataSetChanged()
+    }
 }
+
 
 
