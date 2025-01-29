@@ -6,9 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.laliga.databinding.FragmentCreditBinding
+import com.example.laliga.databinding.FragmentTab2CreditBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
 
@@ -16,6 +18,7 @@ class CreditFragment : Fragment() {
 
     private var _binding : FragmentCreditBinding? = null
     private val binding get() = _binding!!
+
 
     val args: CreditFragmentArgs by navArgs()
 
@@ -29,8 +32,9 @@ class CreditFragment : Fragment() {
 
         binding.tvName.text = getString(R.string.hello_user, args.user)
 
-
         return binding.root
+
+
     }
 
     class CreditAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
