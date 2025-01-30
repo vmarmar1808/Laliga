@@ -3,325 +3,328 @@ package com.example.laliga
 class EquipoProvider {
     companion object {
         val listaEquipos = listOf<Equipo>(
+            // Equipos del Grupo 1
             Equipo(
                 id = 1,
-                nombre = "Arenteiro",
+                nombre = "Athletic B",
                 grupo = "Grupo 1",
-                estadio = "Estadio de Espiñedo",
-                logo = "https://example.com/arenteiro.png",
-                info = "Es un club gallego con una rica historia en el fútbol regional."
+                estadio = "Lezama",
+                logo = "https://cdn.resfu.com/img_data/equipos/348.png",
+                info = "Equipo filial del Athletic Club con una larga tradición en el fútbol español."
             ),
             Equipo(
                 id = 2,
-                nombre = "Lugo",
+                nombre = "Barakaldo",
                 grupo = "Grupo 1",
-                estadio = "Anxo Carro",
-                logo = "https://example.com/lugo.png",
-                info = "Conocido por su fuerte base de aficionados y cantera en Galicia."
+                estadio = "Estadio de Sarriena",
+                logo = "https://cdn.resfu.com/img_data/equipos/425.png",
+                info = "Club con historia en el fútbol vasco y español, participa en varias competiciones."
             ),
             Equipo(
                 id = 3,
-                nombre = "Teruel",
+                nombre = "Osasuna B",
                 grupo = "Grupo 1",
-                estadio = "Estadio de Teruel",
-                logo = "https://example.com/teruel.png",
-                info = "Club con una historia que se remonta a 1960, conocido por su espíritu luchador."
+                estadio = "El Sadar",
+                logo = "https://cdn.resfu.com/img_data/equipos/327.png",
+                info = "El filial de Osasuna, conocido por su fuerte conexión con la cantera."
             ),
             Equipo(
                 id = 4,
-                nombre = "Sabadell",
+                nombre = "Arenteiro",
                 grupo = "Grupo 1",
-                estadio = "Estadio de la Nova Creu Alta",
-                logo = "https://example.com/sabadell.png",
-                info = "Uno de los clubes más antiguos de Cataluña, con tradición en el fútbol español."
+                estadio = "Estadio de Espiñedo",
+                logo = "https://cdn.resfu.com/img_data/equipos/249.png",
+                info = "Es un club gallego con una rica historia en el fútbol regional."
             ),
             Equipo(
                 id = 5,
-                nombre = "Fuenlabrada",
+                nombre = "Lugo",
                 grupo = "Grupo 1",
-                estadio = "Estadio Fernando Torres",
-                logo = "https://example.com/fuenlabrada.png",
-                info = "Emergió en el fútbol español en las últimas décadas, con un crecimiento notable."
+                estadio = "Anxo Carro",
+                logo = "https://cdn.resfu.com/img_data/equipos/1598.png",
+                info = "Conocido por su fuerte base de aficionados y cantera en Galicia."
             ),
             Equipo(
                 id = 6,
-                nombre = "Rayo Majadahonda",
+                nombre = "Cultural Leonesa",
                 grupo = "Grupo 1",
-                estadio = "Estadio Cerro del Espino",
-                logo = "https://example.com/rayomajadahonda.png",
-                info = "Club que ha ido creciendo en la comunidad de Madrid, con un sólido apoyo local."
+                estadio = "Estadio Municipal Reino de León",
+                logo = "https://cdn.resfu.com/img_data/equipos/877.png",
+                info = "Individualmente una de las entidades futbolísticas más antiguas de España."
             ),
             Equipo(
                 id = 7,
-                nombre = "Osasuna B",
+                nombre = "Andorra",
                 grupo = "Grupo 1",
-                estadio = "Estadio El Sadar",
-                logo = "https://example.com/osasunab.png",
-                info = "El filial del Club Atlético Osasuna, centrado en desarrollar talentos jóvenes."
+                estadio = "Estadi Nacional",
+                logo = "https://cdn.resfu.com/img_data/equipos/9501.png",
+                info = "Club que ha tenido un ascenso notable en el fútbol español en años recientes."
             ),
             Equipo(
                 id = 8,
-                nombre = "Cultural Leonesa",
+                nombre = "Barcelona Atlètic",
                 grupo = "Grupo 1",
-                estadio = "Estadio Reino de León",
-                logo = "https://example.com/culturalleonesa.png",
-                info = "Club con una rica historia en el fútbol español, conocido por su afición apasionada."
+                estadio = "Estadi Johan Cruyff",
+                logo = "https://cdn.resfu.com/img_data/equipos/430.png",
+                info = "Filial del FC Barcelona que potencia el talento joven."
             ),
             Equipo(
                 id = 9,
-                nombre = "FC Barcelona At.",
+                nombre = "Nàstic",
                 grupo = "Grupo 1",
-                estadio = "Estadio Johan Cruyff",
-                logo = "https://example.com/barcaat.png",
-                info = "El equipo filial del FC Barcelona, dedicado a la formación de jóvenes talentos."
+                estadio = "Nou Estadi",
+                logo = "https://cdn.resfu.com/img_data/equipos/1228.png",
+                info = "Un club con mucha historia en el fútbol catalán, ubicado en Tarragona."
             ),
             Equipo(
                 id = 10,
-                nombre = "Nàstic de Tarragona",
+                nombre = "Segoviana",
                 grupo = "Grupo 1",
-                estadio = "Estadio Nou Estadi",
-                logo = "https://example.com/nastic.png",
-                info = "Un club con una rica tradición, conocido por su pasión futbolística en Tarragona."
+                estadio = "Estadio Municipal de La Albuera",
+                logo = "https://cdn.resfu.com/img_data/equipos/5715.png",
+                info = "Tiene una ferviente afición local y busca el avance en las ligas españolas."
             ),
             Equipo(
                 id = 11,
-                nombre = "Celta B",
+                nombre = "Ourense",
                 grupo = "Grupo 1",
-                estadio = "Estadio Municipal de Barreiro",
-                logo = "https://example.com/celtab.png",
-                info = "Filial del Real Club Celta de Vigo, dedicado a la formación y promoción de jóvenes."
+                estadio = "Estadio de Pasarón",
+                logo = "https://cdn.resfu.com/img_data/equipos/9401.png",
+                info = "Club con un legado en el fútbol gallego y un gran apoyo comunitario."
             ),
             Equipo(
                 id = 12,
-                nombre = "Deportivo de A Coruña",
+                nombre = "Celta Fortuna",
                 grupo = "Grupo 1",
-                estadio = "Estadio Riazor",
-                logo = "https://example.com/deportivocoruna.png",
-                info = "Club con una larga historia en la Primera División y con una gran afición."
+                estadio = "Estadio de Balaídos",
+                logo = "https://cdn.resfu.com/img_data/equipos/713.png",
+                info = "Filial del RC Celta de Vigo y portavoz del fútbol base en Galicia."
             ),
             Equipo(
                 id = 13,
                 nombre = "Real Sociedad B",
                 grupo = "Grupo 1",
-                estadio = "Estadio Zubieta",
-                logo = "https://example.com/realsociedadb.png",
-                info = "Filial de la Real Sociedad, conocido por su proyecto de cantera."
+                estadio = "Zubieta",
+                logo = "https://cdn.resfu.com/img_data/equipos/2121.png",
+                info = "Promueve talentos jóvenes para la primera plantilla de la Real Sociedad."
             ),
             Equipo(
                 id = 14,
                 nombre = "Real Unión",
                 grupo = "Grupo 1",
                 estadio = "Estadio Gal",
-                logo = "https://example.com/realunion.png",
-                info = "Uno de los clubes más antiguos de España, con una historia llena de logros."
+                logo = "https://cdn.resfu.com/img_data/equipos/2130.png",
+                info = "Conocido por su rica historia y su afición apasionada en Irún."
             ),
             Equipo(
                 id = 15,
-                nombre = "SD Logroñés",
+                nombre = "Amorebieta",
                 grupo = "Grupo 1",
-                estadio = "Estadio Las Gaunas",
-                logo = "https://example.com/logrones.png",
-                info = "Club histórico de La Rioja, con importantes logros en el fútbol español."
+                estadio = "Estadio de Unbe",
+                logo = "https://cdn.resfu.com/img_data/equipos/213.png",
+                info = "Padre del fútbol en el norte de España, con un fuerte enfoque comunitario."
             ),
             Equipo(
                 id = 16,
                 nombre = "Ponferradina",
                 grupo = "Grupo 1",
-                estadio = "Estadio El Toralín",
-                logo = "https://example.com/ponferradina.png",
-                info = "Conocido por su afición leal y su lucha constante en las competiciones."
+                estadio = "El Toralín",
+                logo = "https://cdn.resfu.com/img_data/equipos/3287.png",
+                info = "Club con un fuerte carácter y un rendimiento notable en el fútbol español."
             ),
             Equipo(
                 id = 17,
                 nombre = "Tarazona",
                 grupo = "Grupo 1",
-                estadio = "Estadio Municipal de Tarazona",
-                logo = "https://example.com/tarazona.png",
-                info = "Un club que ha ido creciendo progresivamente en el fútbol español."
+                estadio = "Municipal de Tarazona",
+                logo = "https://cdn.resfu.com/img_data/equipos/2466.png",
+                info = "Conocido por su ambición de ascender y su pasión por el juego."
             ),
             Equipo(
                 id = 18,
-                nombre = "Sestao",
+                nombre = "Sestao River",
                 grupo = "Grupo 1",
-                estadio = "Estadio Las Llanas",
-                logo = "https://example.com/sestao.png",
-                info = "Club con una rica historia y un fiel seguimiento en la comunidad vasca."
+                estadio = "Las Llanas",
+                logo = "https://cdn.resfu.com/img_data/equipos/2309.png",
+                info = "Un club que lucha por recuperar su lugar en las ligas superiores."
             ),
             Equipo(
                 id = 19,
-                nombre = "Cornellà",
+                nombre = "Unionistas de Salamanca",
                 grupo = "Grupo 1",
-                estadio = "Estadio Municipal de Cornellà",
-                logo = "https://example.com/cornella.png",
-                info = "Un club que ha crecido en el fútbol español, conocido por su desarrollo juvenil."
+                estadio = "El Helmántico",
+                logo = "https://cdn.resfu.com/img_data/equipos/54657.png",
+                info = "Fundado por aficionados que querían preservar el legado del fútbol en Salamanca."
             ),
             Equipo(
                 id = 20,
-                nombre = "Unionistas de Salamanca",
+                nombre = "Zamora",
                 grupo = "Grupo 1",
-                estadio = "Estadio Municipal de Las Pistas",
-                logo = "https://example.com/unionistas.png",
-                info = "Formado por aficionados, representa la pasión del fútbol en Salamanca."
+                estadio = "Los Pajaritos",
+                logo = "https://cdn.resfu.com/img_data/equipos/2785.png",
+                info = "Con una rica historia en el fútbol español, siempre compite con pasión."
             ),
+
+            // Equipos del Grupo 2
             Equipo(
                 id = 21,
-                nombre = "Ceuta",
+                nombre = "Alcorcón",
                 grupo = "Grupo 2",
-                estadio = "Estadio Alfonso Murube",
-                logo = "https://example.com/ceuta.png",
-                info = "Conocido por su creciente base de aficionados y una sólida estructura de club."
+                estadio = "Estadio de Santo Domingo",
+                logo = "https://cdn.resfu.com/img_data/equipos/64.png",
+                info = "Club madrileño conocido por su desarrollo en el fútbol de base."
             ),
             Equipo(
                 id = 22,
-                nombre = "Mérida",
+                nombre = "Ceuta",
                 grupo = "Grupo 2",
-                estadio = "Estadio Romano",
-                logo = "https://example.com/merida.png",
-                info = "Un equipo con historia, fundado en 1915, con una rica tradición en el fútbol."
+                estadio = "Estadio Alfonso Murube",
+                logo = "https://cdn.resfu.com/img_data/equipos/665.png",
+                info = "Con un crecimiento significativo en el fútbol regional de Ceuta."
             ),
             Equipo(
                 id = 23,
-                nombre = "Algeciras",
+                nombre = "Mérida",
                 grupo = "Grupo 2",
-                estadio = "Estadio Nuevo Mirador",
-                logo = "https://example.com/algeciras.png",
-                info = "Club histórico que ha ido alternando entre categorías del fútbol español."
+                estadio = "Estadio José Fouto",
+                logo = "https://cdn.resfu.com/img_data/equipos/11989.png",
+                info = "Equipo que busca revitalizar su legado en el fútbol extremeño."
             ),
             Equipo(
                 id = 24,
-                nombre = "Antequera",
+                nombre = "Algeciras",
                 grupo = "Grupo 2",
-                estadio = "Estadio El Maulí",
-                logo = "https://example.com/antequera.png",
-                info = "Un club con un enfoque fuerte en el desarrollo de su cantera."
+                estadio = "Estadio Nuevo Mirador",
+                logo = "https://cdn.resfu.com/img_data/equipos/166.png",
+                info = "Fútbol andaluz con una historia rica y un fuerte grupo de seguidores."
             ),
             Equipo(
                 id = 25,
-                nombre = "At. Sanluqueño",
+                nombre = "Antequera",
                 grupo = "Grupo 2",
-                estadio = "Estadio El Palmar",
-                logo = "https://example.com/sanluqueno.png",
-                info = "Club que representa la ciudad de Sanlúcar, con una afición muy comprometida."
+                estadio = "Estadio El Maulí",
+                logo = "https://cdn.resfu.com/img_data/equipos/227.png",
+                info = "Club en crecimiento en el fútbol andaluz, con grandes aspiraciones."
             ),
             Equipo(
                 id = 26,
-                nombre = "CD Alcoyano",
+                nombre = "Atlético Sanluqueño",
                 grupo = "Grupo 2",
-                estadio = "Estadio El Collao",
-                logo = "https://example.com/alcoyano.png",
-                info = "Con una historia rica, ha sido conocido por su solidez en defensa."
+                estadio = "Estadio El Palmar",
+                logo = "https://cdn.resfu.com/img_data/equipos/333.png",
+                info = "Famoso por su afición leal y su competitividad en cada partido."
             ),
             Equipo(
                 id = 27,
-                nombre = "Atlético Baleares",
+                nombre = "Alcoyano",
                 grupo = "Grupo 2",
-                estadio = "Estadio Balear",
-                logo = "https://example.com/atleticobaleares.png",
-                info = "Famoso en las Islas Baleares, ha tenido un ascenso notable en las últimas temporadas."
+                estadio = "Estadio El Collao",
+                logo = "https://cdn.resfu.com/img_data/equipos/157.png",
+                info = "Otro equipo de la Comunidad Valenciana que busca destacar."
             ),
             Equipo(
                 id = 28,
-                nombre = "Castellón",
+                nombre = "Fuenlabrada",
                 grupo = "Grupo 2",
-                estadio = "Estadio Castalia",
-                logo = "https://example.com/castellon.png",
-                info = "Un club que ha tenido éxito en varias etapas de su historia en el fútbol español."
+                estadio = "Estadio Fernando Torres",
+                logo = "https://cdn.resfu.com/img_data/equipos/1179.png",
+                info = "Famoso por su enfoque en las categorías de base."
             ),
             Equipo(
                 id = 29,
                 nombre = "Intercity",
                 grupo = "Grupo 2",
-                estadio = "Estadio José Antonio, Alacant",
-                logo = "https://example.com/intercity.png",
-                info = "Un club que ha visitado recientemente las competiciones profesionales con gran ambición."
+                estadio = "Estadio Municipal de Sant Joan",
+                logo = "https://cdn.resfu.com/img_data/equipos/102474.png?size=35x&v=12",
+                info = "Con una estructura moderna y ambiciones de ascenso."
             ),
             Equipo(
                 id = 30,
-                nombre = "Atlético de Madrid B",
+                nombre = "Atlético B",
                 grupo = "Grupo 2",
-                estadio = "Estadio de la Ciudad Deportiva",
-                logo = "https://example.com/madridb.png",
-                info = "El filial del Atlético de Madrid, enfocado en el desarrollo de sus jóvenes talentos."
+                estadio = "Cerro del Espino",
+                logo = "https://cdn.resfu.com/img_data/equipos/323.png",
+                info = "Equipo juvenil buscando talento en el Atlético de Madrid."
             ),
             Equipo(
                 id = 31,
-                nombre = "Recreativo Granada",
+                nombre = "Hércules",
                 grupo = "Grupo 2",
-                estadio = "Estadio Nuevo Los Cármenes",
-                logo = "https://example.com/recreativogranada.png",
-                info = "Club joven, creado en 2017, que busca consolidarse en el panorama nacional."
+                estadio = "Estadio José Rico Pérez",
+                logo = "https://cdn.resfu.com/img_data/equipos/1311.png",
+                info = "Club con gran historia en el fútbol español y una fiel afición."
             ),
             Equipo(
                 id = 32,
-                nombre = "Córdoba",
+                nombre = "Marbella",
                 grupo = "Grupo 2",
-                estadio = "Estadio El Arcángel",
-                logo = "https://example.com/cordoba.png",
-                info = "Con una rica tradición, el Córdoba ha tenido éxito en categorías superiores."
+                estadio = "Estadio Municipal de Marbella",
+                logo = "https://cdn.resfu.com/img_data/equipos/2565.png",
+                info = "Buscando hacer un impacto en el fútbol andaluz."
             ),
             Equipo(
                 id = 33,
-                nombre = "Linares",
+                nombre = "Betis Deportivo",
                 grupo = "Grupo 2",
-                estadio = "Estadio de Linarejos",
-                logo = "https://example.com/linares.png",
-                info = "Conocido por su fuerte afición y pasión por el fútbol en Jaén."
+                estadio = "Estadio Manuel Ruiz de Lopera",
+                logo = "https://cdn.resfu.com/img_data/equipos/2099.png",
+                info = "Filial del Real Betis, enfocándose en el desarrollo juvenil."
             ),
             Equipo(
                 id = 34,
-                nombre = "Málaga",
+                nombre = "Castilla",
                 grupo = "Grupo 2",
-                estadio = "Estadio La Rosaleda",
-                logo = "https://example.com/malaga.png",
-                info = "Club con historia en La Liga, que busca regresar a las categorías superiores."
+                estadio = "Estadio Alfredo Di Stéfano",
+                logo = "https://cdn.resfu.com/img_data/equipos/2170.png",
+                info = "Filial del Real Madrid, siendo una cantera de grandes talentos."
             ),
             Equipo(
                 id = 35,
-                nombre = "Recreativo de Huelva",
-                grupo = "Grupo 2",
-                estadio = "Estadio Nuevo Colombino",
-                logo = "https://example.com/recreativohuelva.png",
-                info = "Uno de los clubes más históricos de España, fundado en 1889."
-            ),
-            Equipo(
-                id = 36,
-                nombre = "Real Madrid Castilla",
-                grupo = "Grupo 2",
-                estadio = "Estadio Alfredo Di Stéfano",
-                logo = "https://example.com/rmcastilla.png",
-                info = "Filial del Real Madrid, dedicado a formar futuros talentos del club."
-            ),
-            Equipo(
-                id = 37,
                 nombre = "Real Murcia",
                 grupo = "Grupo 2",
                 estadio = "Estadio Nueva Condomina",
-                logo = "https://example.com/realmurcia.png",
-                info = "Un club con una rica historia que ha pasado por diversas categorías."
+                logo = "https://cdn.resfu.com/img_data/equipos/2113.png",
+                info = "Con una rica historia en el fútbol español, busca el ascenso."
+            ),
+            Equipo(
+                id = 36,
+                nombre = "Recreativo de Huelva",
+                grupo = "Grupo 2",
+                estadio = "Estadio Nuevo Colombino",
+                logo = "https://cdn.resfu.com/img_data/equipos/2141.png",
+                info = "Uno de los clubes más históricos del fútbol español, con una gran afición."
+            ),
+            Equipo(
+                id = 37,
+                nombre = "Sevilla Atlético",
+                grupo = "Grupo 2",
+                estadio = "Estadio Jesús Navas",
+                logo = "https://cdn.resfu.com/img_data/equipos/2311.png",
+                info = "Filial del Sevilla FC, enfocado en el desarrollo de jóvenes talentos."
             ),
             Equipo(
                 id = 38,
-                nombre = "San Fernando Isleño",
-                grupo = "Grupo 2",
-                estadio = "Estadio Iberoamericano",
-                logo = "https://example.com/sanfernando.png",
-                info = "Representa a San Fernando en la categoría nacional, con una base de aficionados leal."
-            ),
-            Equipo(
-                id = 39,
                 nombre = "Ibiza",
                 grupo = "Grupo 2",
                 estadio = "Estadio Can Misses",
-                logo = "https://example.com/ibiza.png",
-                info = "Club joven que busca destacarse en el panorama del fútbol español."
+                logo = "https://cdn.resfu.com/img_data/equipos/1352.png",
+                info = "Club con un crecimiento notable y mucha esperanza en la categoría."
+            ),
+            Equipo(
+                id = 39,
+                nombre = "Villarreal B",
+                grupo = "Grupo 2",
+                estadio = "Estadio de la Cerámica",
+                logo = "https://cdn.resfu.com/img_data/equipos/2717.png",
+                info = "Filial del Villarreal CF, conocido por su apuesta en cantera."
             ),
             Equipo(
                 id = 40,
-                nombre = "Melilla",
+                nombre = "Yeclano",
                 grupo = "Grupo 2",
-                estadio = "Estadio Álvarez Claro",
-                logo = "https://example.com/melilla.png",
-                info = "Con una pasión por el fútbol que refleja la diversidad cultural de su ciudad."
+                estadio = "Estadio La Constitución",
+                logo = "https://cdn.resfu.com/img_data/equipos/2774.png",
+                info = "Club de Yecla con una rica historia en el fútbol murciano, buscando volver a las ligas profesionales."
             )
         )
     }
