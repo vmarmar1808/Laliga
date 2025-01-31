@@ -5,12 +5,11 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.laliga.Equipo
-import com.example.laliga.EquipoOptionsBottomSheetFragment
 import com.example.laliga.R
 
 class EquipoAdapter(
     private var equipoLista: List<Equipo>,
-    private val listener: EquipoOptionsBottomSheetFragment.OnEquipoOptionSelected
+
 ) : RecyclerView.Adapter<EquipoViewHold>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EquipoViewHold {
@@ -23,11 +22,7 @@ class EquipoAdapter(
         val itemEquipo = equipoLista[position]
         holder.render(itemEquipo)
 
-        // Mostrar el BottomSheet al hacer clic
-        holder.itemView.setOnClickListener {
-            val bottomSheet = EquipoOptionsBottomSheetFragment(itemEquipo, listener)
-            bottomSheet.show((it.context as AppCompatActivity).supportFragmentManager, "EquipoOptionsBottomSheet")
-        }
+
     }
 
     override fun getItemCount(): Int = equipoLista.size

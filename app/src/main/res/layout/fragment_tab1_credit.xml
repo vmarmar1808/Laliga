@@ -17,14 +17,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtTitle" />
 
-    <!-- Título principal -->
-
-    <!-- Descripción de la app -->
-
-    <!-- Texto adicional -->
-
-    <!-- Pie de página -->
-
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
@@ -46,7 +38,7 @@
         android:layout_marginTop="64dp"
         android:gravity="center"
         android:text="Bienvenido a la app oficial de la Primera RFEF. Aquí encontrarás toda la información relacionada con la liga, los equipos y mucho más."
-        android:textColor="#CCCCCC"
+        android:textColor="@color/letrasIntro"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -61,7 +53,7 @@
         android:layout_marginTop="60dp"
         android:gravity="center"
         android:text="¡Disfruta de la experiencia completa del fútbol español de forma sencilla y accesible desde tu móvil!"
-        android:textColor="#CCCCCC"
+        android:textColor="@color/letrasIntro"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"

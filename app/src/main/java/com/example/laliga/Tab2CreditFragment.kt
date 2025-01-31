@@ -31,7 +31,7 @@ class Tab2CreditFragment : Fragment() {
 
 binding.btn1.setOnClickListener{
 
-    parentFragment?.findNavController()?.navigate(CreditFragmentDirections.actionCreditFragmentToMenuFragment())
+    findNavController().navigate(CreditFragmentDirections.actionCreditFragmentToMenuFragment())
 }
     }
 }

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.laliga.adapter.EquipoAdapter
@@ -13,7 +14,9 @@ import com.example.laliga.databinding.FragmentFavItemListBinding
 
 class FavItemListFragment : Fragment() {
 
-    private lateinit var binding: FragmentFavItemListBinding
+    private var _binding: FragmentFavItemListBinding? = null
+    private val binding get() = _binding!!
+
     private lateinit var equipoViewModel: EquipoViewModel
     private lateinit var adapter: EquipoAdapter
 
@@ -21,28 +24,37 @@ class FavItemListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentFavItemListBinding.inflate(inflater, container, false)
+        _binding = FragmentFavItemListBinding.inflate(inflater, container, false)
         equipoViewModel = ViewModelProvider(requireActivity()).get(EquipoViewModel::class.java)
 
         initRecyclerView()
 
-        // Observar cambios en la lista de favoritos
-        equipoViewModel.favoritos.observe(viewLifecycleOwner) { listaFavoritos ->
-            adapter.actualizarLista(listaFavoritos)
-        }
-
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Observamos los favoritos
+        equipoViewModel.favoritos.observe(viewLifecycleOwner, Observer { favoritos ->
+            if (favoritos != null) {
+                adapter.actualizarLista(favoritos) // 🔥 ACTUALIZAMOS LA LISTA
+            }
+        })
     }
 
     private fun initRecyclerView() {
         val manager = LinearLayoutManager(requireContext())
-        adapter = EquipoAdapter(mutableListOf(), object : EquipoOptionsBottomSheetFragment.OnEquipoOptionSelected {
-            override fun onEquipoOptionSelected(option: String, equipo: Equipo) {
-                // No necesitas implementar lógica aquí
-            }
-        })
-
         binding.recyclerLaLiga2.layoutManager = manager
+
+        // Inicializar adapter con lista vacía
+        adapter = EquipoAdapter(emptyList())
         binding.recyclerLaLiga2.adapter = adapter
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null // Evitar memory leaks
+    }
 }
+

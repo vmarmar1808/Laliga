@@ -56,7 +56,6 @@ class CreditFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         binding.vpNotice.adapter = CreditAdapter (this)
         TabLayoutMediator(binding.TabNotice, binding.vpNotice){
 

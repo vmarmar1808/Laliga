@@ -13,7 +13,7 @@ import com.example.laliga.adapter.EquipoAdapter
 import com.example.laliga.databinding.FragmentItemListBinding
 
 
-class ItemListFragment : Fragment(), EquipoOptionsBottomSheetFragment.OnEquipoOptionSelected {
+class ItemListFragment : Fragment() {
 
     private lateinit var binding: FragmentItemListBinding
     private lateinit var equipoViewModel: EquipoViewModel
@@ -40,20 +40,13 @@ class ItemListFragment : Fragment(), EquipoOptionsBottomSheetFragment.OnEquipoOp
     private fun initRecyclerView() {
         val manager = LinearLayoutManager(requireContext())
         binding.recyclerLaLiga.layoutManager = manager
-        binding.recyclerLaLiga.adapter = EquipoAdapter(EquipoProvider.listaEquipos, this)
+        binding.recyclerLaLiga.adapter = EquipoAdapter(EquipoProvider.listaEquipos)
     }
 
-    override fun onEquipoOptionSelected(option: String, equipo: Equipo) {
-        when (option) {
-            "favoritos" -> {
-                // Este código ya no es necesario, ya que lo manejamos en el BottomSheet
-            }
-            "comentario" -> {
-                Toast.makeText(requireContext(), "Comentario añadido para ${equipo.nombre}", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
+
 }
+
+
 
 
 
