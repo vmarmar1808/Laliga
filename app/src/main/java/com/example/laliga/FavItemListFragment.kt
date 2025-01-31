@@ -14,47 +14,38 @@ import com.example.laliga.databinding.FragmentFavItemListBinding
 
 class FavItemListFragment : Fragment() {
 
-    private var _binding: FragmentFavItemListBinding? = null
-    private val binding get() = _binding!!
-
+    private lateinit var binding: FragmentFavItemListBinding
     private lateinit var equipoViewModel: EquipoViewModel
-    private lateinit var adapter: EquipoAdapter
+    private lateinit var adapter: EquipoAdapter // Asegurar que se inicialice correctamente
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentFavItemListBinding.inflate(inflater, container, false)
-        equipoViewModel = ViewModelProvider(requireActivity()).get(EquipoViewModel::class.java)
-
-        initRecyclerView()
-
+        binding = FragmentFavItemListBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Observamos los favoritos
-        equipoViewModel.favoritos.observe(viewLifecycleOwner, Observer { favoritos ->
-            if (favoritos != null) {
-                adapter.actualizarLista(favoritos) // 🔥 ACTUALIZAMOS LA LISTA
-            }
-        })
+        equipoViewModel = ViewModelProvider(requireActivity()).get(EquipoViewModel::class.java)
+
+        // 1️⃣ Configurar RecyclerView antes de observar los datos
+        initRecyclerView()
+
+        // 2️⃣ Observar cambios en favoritos y actualizar el adaptador
+        equipoViewModel.favoritos.observe(viewLifecycleOwner) { favoritos ->
+            adapter.actualizarLista(favoritos) // Actualiza los datos del RecyclerView
+        }
     }
 
     private fun initRecyclerView() {
         val manager = LinearLayoutManager(requireContext())
         binding.recyclerLaLiga2.layoutManager = manager
-
-        // Inicializar adapter con lista vacía
-        adapter = EquipoAdapter(emptyList())
+        adapter = EquipoAdapter(emptyList(), "favItemList") // Inicializar el adaptador vacío
         binding.recyclerLaLiga2.adapter = adapter
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null // Evitar memory leaks
-    }
 }
+
 

@@ -40,11 +40,13 @@ class ItemListFragment : Fragment() {
     private fun initRecyclerView() {
         val manager = LinearLayoutManager(requireContext())
         binding.recyclerLaLiga.layoutManager = manager
-        binding.recyclerLaLiga.adapter = EquipoAdapter(EquipoProvider.listaEquipos)
+        binding.recyclerLaLiga.adapter = EquipoAdapter(EquipoProvider.listaEquipos, "itemList")
     }
 
-
 }
+
+
+
 
 
 

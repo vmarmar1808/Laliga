@@ -9,5 +9,22 @@
         android:id="@+id/favItemListFragment"
         android:name="com.example.laliga.FavItemListFragment"
         android:label="fragment_fav_item_list"
-        tools:layout="@layout/fragment_fav_item_list" />
+        tools:layout="@layout/fragment_fav_item_list" >
+        <action
+            android:id="@+id/action_favItemListFragment_to_detailFavItemFragment"
+            app:destination="@id/detailFavItemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFavItemFragment"
+        android:name="com.example.laliga.DetailFavItemFragment"
+        android:label="fragment_detail_fav_item"
+        tools:layout="@layout/fragment_detail_fav_item" >
+        <argument
+            android:name="nombre_equipo"
+            app:argType="string" />
+        <argument
+            android:name="id_equipo"
+            app:argType="integer" />
+    </fragment>
 </navigation>

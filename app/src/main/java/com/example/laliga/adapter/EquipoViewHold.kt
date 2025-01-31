@@ -11,13 +11,14 @@ import com.bumptech.glide.Glide
 import com.example.laliga.Equipo
 import com.example.laliga.EquipoProvider
 import com.example.laliga.EquipoViewModel
+import com.example.laliga.FavItemListFragmentDirections
 import com.example.laliga.ItemListFragmentDirections
 import com.example.laliga.MenuFragmentDirections
 import com.example.laliga.databinding.FragmentFavItemListBinding
 import com.example.laliga.databinding.ItemEquiposBinding
 
 
-class EquipoViewHold(view: View) : RecyclerView.ViewHolder(view) {
+class EquipoViewHold(view: View, private val origen: String) : RecyclerView.ViewHolder(view) {
 
     val binding = ItemEquiposBinding.bind(view)
 
@@ -34,10 +35,19 @@ class EquipoViewHold(view: View) : RecyclerView.ViewHolder(view) {
         // Navegación al detalle de comentarios
         binding.btnComentario.setOnClickListener {
             val navController = Navigation.findNavController(binding.root)
-            val request = ItemListFragmentDirections.actionItemListFragmentToDetailFavItemFragment(
-                nombreEquipo = equipoModel.nombre,
-                idEquipo = equipoModel.id // Pasamos el ID del equipo
-            )
+
+            val request = if (origen == "favItemList") {
+                FavItemListFragmentDirections.actionFavItemListFragmentToDetailFavItemFragment(
+                    nombreEquipo = equipoModel.nombre,
+                    idEquipo = equipoModel.id
+                )
+            } else {
+                ItemListFragmentDirections.actionItemListFragmentToDetailFavItemFragment(
+                    nombreEquipo = equipoModel.nombre,
+                    idEquipo = equipoModel.id
+                )
+            }
+
             navController.navigate(request)
         }
 
@@ -49,7 +59,7 @@ class EquipoViewHold(view: View) : RecyclerView.ViewHolder(view) {
         // Agregar o quitar de favoritos
         binding.btnFav.setOnClickListener {
             val context = binding.root.context
-            if (context is ViewModelStoreOwner) { // Verificar si el contexto es un ViewModelStoreOwner
+            if (context is ViewModelStoreOwner) {
                 val equipoViewModel = ViewModelProvider(context).get(EquipoViewModel::class.java)
                 val favoritos = equipoViewModel.favoritos.value ?: listOf()
 
@@ -66,4 +76,5 @@ class EquipoViewHold(view: View) : RecyclerView.ViewHolder(view) {
         }
     }
 }
+
 
