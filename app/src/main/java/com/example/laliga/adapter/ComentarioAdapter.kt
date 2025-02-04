@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.laliga.ItemComentario
 import com.example.laliga.R
 import com.example.laliga.databinding.ItemComentariosBinding
 

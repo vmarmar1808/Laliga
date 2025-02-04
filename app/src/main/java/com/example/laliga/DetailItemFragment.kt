@@ -12,7 +12,7 @@ class DetailItemFragment : Fragment() {
 
     /**
      * Hasta que no tenga base de datos, la info (que he añadido un apartado en la lista de EquipoProvider)
-     * que aparece está en un Toast al hacer click en un boton de info que hay en el menu de OptionsBotoomSheet.
+     * que aparece está en un Toast al hacer click en el botón de info.
      * */
 
     override fun onCreateView(

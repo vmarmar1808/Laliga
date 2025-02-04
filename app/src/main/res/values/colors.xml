@@ -5,4 +5,12 @@
     <color name="fondo">#1A2235</color>
     <color name="red">#FC1729</color>
     <color name="letrasIntro">#3F3F3F</color>
+
+    <color name="my_dark_primary">#BB86FC</color>
+    <color name="text_dark">#D90B0B</color>
+    <color name="background_dark">#3F3F3F</color>
+
+    <color name="my_light_primary">#6200EE</color>
+    <color name="background_light">#FFFFFF</color>
+    <color name="text_light">#000000</color>
 </resources>
