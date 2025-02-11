@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Laliga</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_user">Bienvenido %s, esta es la app oficial de 1ºRFEF</string>
+    <string name="Bienvenida_app">Bienvenido a la app de 1ºRFEF</string>
+    <string name="nombre_usuario">  Nombre de usuario  </string>
+    <string name="btn_login">          Entrar            </string>
+    <string name="tituloTab1">Primera RFEF</string>
+    <string name="bienvenida_tab1">Bienvenido a la app oficial de la Primera RFEF. Aquí encontrarás toda la información relacionada con la liga, los equipos y mucho más.</string>
+    <string name="disfruta_tab1">¡Disfruta de la experiencia completa del fútbol español de forma sencilla y accesible desde tu móvil!</string>
+    <string name="btn_tab2">Comenzar</string>
+    <string name="menu_equipo">Equipos</string>
+    <string name="menu_fav">Favortos</string>
+    <string name="menu_perfil">Perfil</string>
+    <string name="btn_menu_salir">Salir</string>
+    <string name="btn_info_menu">Editar información</string>
+</resources>

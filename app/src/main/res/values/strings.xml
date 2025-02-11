@@ -2,5 +2,17 @@
     <string name="app_name">Laliga</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hello_user">Bienvenido %s, esta es la app oficial de 1ºRFEF</string>
+    <string name="hello_user">Welcome %s, this is the official 1ºRFEF app</string>
+    <string name="Bienvenida_app">Welcome to the 1ºRFEF app</string>
+    <string name="nombre_usuario">Username</string>
+    <string name="btn_login">Log in</string>
+    <string name="tituloTab1">Primera RFEF</string>
+    <string name="bienvenida_tab1">Welcome to the official app of Primera RFEF. Here you will find all the information related to the league, the teams, and much more.</string>
+    <string name="disfruta_tab1">Enjoy the full experience of Spanish football in a simple and accessible way from your mobile!</string>
+    <string name="btn_tab2">Start</string>
+    <string name="menu_equipo">Teams</string>
+    <string name="menu_fav">Favorites</string>
+    <string name="menu_perfil">Profile</string>
+    <string name="btn_menu_salir">Log out</string>
+    <string name="btn_info_menu">Edit information</string>
 </resources>

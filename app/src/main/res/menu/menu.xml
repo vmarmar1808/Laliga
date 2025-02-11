@@ -3,16 +3,16 @@
     <item
         android:id="@id/itemlist_navigation"
         android:icon="@drawable/ic_home"
-        android:title="Equipos"
+        android:title="@string/menu_equipo"
         />
 
     <item
         android:id="@+id/favitemlist_navigation"
         android:icon="@drawable/ic_favourite"
-        android:title="Favoritos" />
+        android:title="@string/menu_fav" />
 
     <item
         android:id="@+id/userinfo_navigation"
         android:icon="@drawable/ic_ajustes"
-        android:title="Perfil" />
+        android:title="@string/menu_perfil" />
 </menu>

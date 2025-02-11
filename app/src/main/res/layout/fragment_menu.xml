@@ -35,7 +35,7 @@
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Salir"
+            android:text="@string/btn_menu_salir"
             android:backgroundTint="@color/red"
             android:textSize="14sp"
             android:padding="4dp"
