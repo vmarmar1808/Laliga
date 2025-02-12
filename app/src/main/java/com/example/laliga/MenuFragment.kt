@@ -30,7 +30,11 @@ return binding.root
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.backButton.setOnClickListener{
+        binding.btnBack.setOnClickListener{
+            requireActivity().supportFragmentManager.popBackStack()
+        }
+
+        binding.logoutButton.setOnClickListener{
 
             findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToLoginFragment())
         }

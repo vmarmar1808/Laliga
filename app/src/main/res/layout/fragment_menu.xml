@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MenuFragment">
 
-    <!-- Contenedor superior con TextView y Button -->
+    <!-- Contenedor superior con TextView y Botones -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
@@ -16,26 +16,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
+
+
+        <!-- Botón de Cerrar Sesión a la derecha -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_margin="15dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Volver"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/titleTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
             android:text="Primera Federación"
             android:textColor="@color/red"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:ellipsize="end"
-            android:maxLines="1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/backButton"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/logoutButton"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/backButton"
+            android:id="@+id/logoutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_menu_salir"
+            android:text="Cerrar Sesión"
             android:backgroundTint="@color/red"
             android:textSize="14sp"
             android:padding="4dp"
@@ -67,3 +83,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:menu="@menu/menu"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

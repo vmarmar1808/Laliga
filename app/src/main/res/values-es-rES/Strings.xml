@@ -12,9 +12,9 @@
     <string name="disfruta_tab1">¡Disfruta de la experiencia completa del fútbol español de forma sencilla y accesible desde tu móvil!</string>
     <string name="btn_tab2">Comenzar</string>
     <string name="menu_equipo">Equipos</string>
-    <string name="menu_fav">Favortos</string>
+    <string name="menu_fav">Favoritos</string>
     <string name="menu_perfil">Perfil</string>
-    <string name="btn_menu_salir">Salir</string>
+    <string name="btn_menu_salir">Cerrar sesion</string>
     <string name="btn_info_menu">Editar información</string>
     <string name="nombre_equipo">Equipo: </string>
     <string name="grupo_equipo">Grupo: </string>

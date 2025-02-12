@@ -37,9 +37,10 @@
 
     <EditText
         android:id="@+id/edUsuario"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="0dp"
         android:hint="@string/nombre_usuario"
+        android:gravity="center"
         android:inputType="textPersonName"
         app:layout_constraintTop_toBottomOf="@id/ivImage"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +51,7 @@
 
     <Button
         android:id="@+id/btn"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="0dp"
         android:text="@string/btn_login"
         android:backgroundTint="@color/red"

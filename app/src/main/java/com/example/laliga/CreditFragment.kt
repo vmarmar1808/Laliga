@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -55,6 +56,16 @@ class CreditFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // Encuentra el ImageButton dentro del LinearLayout
+        val backButton: ImageButton? = binding.linearLayout?.findViewById(R.id.btnExit)
+
+// Establecer el OnClickListener para el botón de retroceso
+        backButton?.setOnClickListener {
+            // Cuando el botón de retroceso es presionado, se hace pop del stack
+            requireActivity().supportFragmentManager.popBackStack()
+        }
+
 
         binding.vpNotice.adapter = CreditAdapter (this)
         TabLayoutMediator(binding.TabNotice, binding.vpNotice){
