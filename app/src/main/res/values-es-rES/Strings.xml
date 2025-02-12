@@ -16,4 +16,7 @@
     <string name="menu_perfil">Perfil</string>
     <string name="btn_menu_salir">Salir</string>
     <string name="btn_info_menu">Editar información</string>
+    <string name="nombre_equipo">Equipo: </string>
+    <string name="grupo_equipo">Grupo: </string>
+    <string name="estadio_equipo">Estadio: </string>
 </resources>

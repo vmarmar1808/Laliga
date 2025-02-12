@@ -48,6 +48,11 @@ class EquipoViewModel : ViewModel() {
             _favoritos.value = currentFavoritos
         }
     }
+
+    fun obtenerEquipoPorId(equipoId: Int, listaEquipos: List<Equipo>): Equipo? {
+        return listaEquipos.find { it.id == equipoId }
+    }
+
 }
 
 

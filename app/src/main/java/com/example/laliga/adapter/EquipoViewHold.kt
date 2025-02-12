@@ -53,8 +53,21 @@ class EquipoViewHold(view: View, private val origen: String) : RecyclerView.View
 
         // Mostrar información del equipo
         binding.btnInfo.setOnClickListener {
-            Toast.makeText(binding.ivEquipo.context, equipoModel.info, Toast.LENGTH_LONG).show()
+            val navController = Navigation.findNavController(binding.root)
+
+            val request = if (origen == "favItemList") {
+                FavItemListFragmentDirections.actionFavItemListFragmentToDetailItemFragment(
+                    idEquipo = equipoModel.id
+                )
+            } else {
+                ItemListFragmentDirections.actionItemListFragmentToDetailItemFragment(
+                    idEquipo = equipoModel.id
+                )
+            }
+
+            navController.navigate(request)
         }
+
 
         // Agregar o quitar de favoritos
         binding.btnFav.setOnClickListener {
