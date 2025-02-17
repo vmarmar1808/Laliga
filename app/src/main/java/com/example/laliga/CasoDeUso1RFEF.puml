@@ -1,0 +1,51 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+:Usuario: as Usuario
+
+(Iniciar Aplicación) as (Inicio)
+(Ver Pantalla de Inicio) as (Splash)
+(Iniciar Sesión) as (Login)
+(Ver Créditos) as (Creditos)
+(Navegar entre Pestañas) as (Pestañas)
+(Abrir Menú) as (Menu)
+(Ver Lista de Equipos) as (Equipos)
+(Añadir a Favoritos) as (AñadirFav)
+(Quitar de Favoritos) as (QuitarFav)
+(Ver Lista de Favoritos) as (ListaFav)
+(Comentar sobre un Equipo) as (Comentar)
+(Ver Información del Equipo) as (InfoEquipo)
+(Ver Información del Usuario) as (InfoUsuario)
+(Cerrar Sesión) as (CerrarSesion)
+
+Usuario -> (Inicio)
+(Inicio) --> (Splash) : 3s
+(Splash) --> (Login)
+(Login) --> (Creditos)
+(Creditos) --> (Pestañas)
+(Pestañas) --> (Menu)
+(Menu) --> (Equipos)
+(Menu) --> (ListaFav)
+(Menu) --> (InfoUsuario)
+(Menu) --> (CerrarSesion)
+(Equipos) --> (AñadirFav)
+(Equipos) --> (QuitarFav)
+(Equipos) --> (Comentar)
+(Equipos) --> (InfoEquipo)
+(CerrarSesion) --> (Login) : Volver a iniciar sesión
+
+note right of (Pestañas)
+El usuario puede navegar entre
+las pestañas de información
+y menú antes de continuar
+end note
+
+note right of (ListaFav)
+Aquí se muestran los equipos
+que el usuario ha marcado como favoritos
+end note
+
+note "El diagrama muestra los casos de uso\ncon el flujo correcto de la aplicación." as N1
+(Inicio) .. N1
+N1 .. (CerrarSesion)
+@enduml

@@ -1,0 +1,138 @@
+@startuml
+class SplashActivity {
+  + mostrarLogo()
+  + esperarTiempo()
+}
+
+class LoginFragment {
+  - EditText nombreUsuario
+  - Button loginButton
+  + onLoginClicked()
+}
+
+class CreditFragment {
+  - ViewPager2 viewPager
+  - TabLayout tabLayout
+  + inicializarTabs()
+}
+
+class Tab1CreditFragment {
+  + mostrarInformacionApp()
+}
+
+class Tab2CreditFragment {
+  - Button btnIrAlMenu
+  + navegarAlMenu()
+}
+
+class MenuFragment {
+  - Button btnCerrarSesion
+  - Button btnItemList
+  - Button btnFavItemList
+  - Button btnUserInfo
+  + cerrarSesion()
+  + irAItemList()
+  + irAFavItemList()
+  + irAUserInfo()
+}
+
+class ItemListFragment {
+  - RecyclerView recyclerView
+  - List<Equipo> equipos
+  + mostrarEquipos()
+}
+
+class FavItemListFragment {
+  - RecyclerView recyclerView
+  - List<Equipo> equiposFavoritos
+  + mostrarFavoritos()
+}
+
+class UserInfoFragment {
+  + mostrarInformacionUsuario()
+}
+
+class DetailFavItemFragment {
+  - EditText comentario
+  - Button btnAgregarComentario
+  + agregarComentario()
+}
+
+class DetailItemFragment {
+  - TextView nombreEquipo
+  - ImageView logoEquipo
+  + mostrarInformacionEquipo()
+}
+
+class Equipo {
+  - String id
+  - String nombre
+  - String estadio
+  - String grupo
+  - String logo
+  + getId()
+  + getNombre()
+  + getEstadio()
+  + getGrupo()
+  + getLogo()
+}
+
+class EquipoProvider {
+  - List<Equipo> equipos
+  + obtenerEquipos()
+  + agregarEquipo(Equipo equipo)
+  + eliminarEquipo(Equipo equipo)
+}
+
+class EquipoAdapter {
+  - Context context
+  - List<Equipo> equipos
+  + onCreateViewHolder()
+  + onBindViewHolder()
+  + getItemCount()
+}
+
+class EquipoViewModel {
+  - EquipoProvider equipoProvider
+  - List<Equipo> favoritos
+  + agregarAFavoritos(Equipo equipo)
+  + eliminarDeFavoritos(Equipo equipo)
+  + obtenerFavoritos()
+}
+
+class EquipoViewHolder {
+  - View view
+  - ImageView logo
+  - TextView nombre
+  + bind(Equipo equipo)
+}
+
+class ComentarioAdapter {
+  - List<String> comentarios
+  + onCreateViewHolder()
+  + onBindViewHolder()
+  + getItemCount()
+  + agregarComentario(String comentario)
+}
+
+SplashActivity --> LoginFragment : "transición"
+LoginFragment --> CreditFragment : "login exitoso"
+CreditFragment --> Tab1CreditFragment : "tab1"
+CreditFragment --> Tab2CreditFragment : "tab2"
+Tab2CreditFragment --> MenuFragment : "botón ir al menú"
+MenuFragment --> ItemListFragment : "ver equipos"
+MenuFragment --> FavItemListFragment : "ver favoritos"
+MenuFragment --> UserInfoFragment : "ver usuario"
+ItemListFragment --> EquipoAdapter : "muestra equipos"
+ItemListFragment --> EquipoViewModel : "gestiona favoritos"
+FavItemListFragment --> EquipoAdapter : "muestra favoritos"
+FavItemListFragment --> EquipoViewModel : "gestiona favoritos"
+DetailFavItemFragment --> ComentarioAdapter : "muestra comentarios"
+DetailItemFragment --> Equipo : "muestra información del equipo"
+
+EquipoProvider "1" --> "0..*" Equipo : "gestiona"
+EquipoAdapter "1" --> "0..*" Equipo : "muestra"
+EquipoViewModel "1" --> "1" EquipoProvider : "gestiona"
+EquipoViewModel "1" --> "0..*" Equipo : "favoritos"
+ComentarioAdapter "1" --> "0..*" String : "muestra comentarios"
+@enduml
